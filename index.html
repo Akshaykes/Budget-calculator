@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container_full">
+      <div class="container">
+        <div class="budget-app">
+          <div class="headline">
+            <h1>Budget Calculator</h1>
+          </div>
+
+          <div class="content-left floatleft">
+            <div class="enter-budget-box">
+              <label for="budget">Enter Your Budget</label><br />
+              <input type="text" class="form-control" id="budget" /><br />
+              <label for="currency">Select Currency</label> 
+              <select name="" id="currency">
+                <option value="" disabled selected> ----- </option>
+                <option value="₹">₹</option>                
+                <option value="€">€</option>
+                <option value="$">$</option>
+                <option value="¥">¥</option>
+                <option value="৳">৳</option>
+              </select><br>
+              <button class="btn btn-outline-success" id="add-budget-btn">Start</button>
+              <button class="btn btn-outline-danger" id="reset-app-btn">Reset</button>
+            </div>
+            <div class="add-expense-box">
+              <label for="expense">Please Enter Your Expense Title</label><br />
+              <input type="text" class="form-control" placeholder="(e.g Book)" id="expense-title" /><br />
+              <label for="expense-amount">Please Enter Expense Amount</label
+              ><br />
+              <input type="text" class="form-control" id="expense-amount" /><br />
+              <button class="btn btn-outline-danger" id="add-expense-btn">Add Expense</button>
+            </div>
+          </div>
+          <div class="content-right floatright">
+            <div class="balances">
+                <div class="budget items">
+                    <p><b>Budget</b> </p>
+                    <div class="logo">
+                        <img src="img/budget.png" alt="">
+                    </div>
+                    <div class="budget-amount"><span id="currency-symbol">$</span> <span id="budget-amount">0</span></div>
+                </div>
+                <div class="expenses items">
+                    <p><b>Expenses</b> </p>
+                    <div class="logo">
+                        <img src="img/expense.png" alt="">
+                    </div>
+                    <div class="expenses-amount"><span id="currency-symbol">$</span> <span id="expenses-amount">0</span></div>
+                </div>
+                <div class="balance items">
+                    <p> <b>Balance</b> </p>
+                    <div class="logo">
+                        <img src="img/doller.png" alt="">
+                    </div>                    
+                    <div class="balance-amount"><span id="currency-symbol">$</span> <span id="balance-amount">0</span></div>
+                </div>
+            </div>
+            <div class="expenses">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td> <b>Expense Title</b> </td>
+                                <td> <b>Expense Amount</b> </td>                            
+                                <td> <b>Delete</b></td>                            
+                            </tr>                        
+                        </thead>                        
+                    </table> 
+                    <div id="expense-list"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
